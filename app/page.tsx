@@ -1,34 +1,29 @@
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-
-export default function Page() {
+export default function Home() {
   return (
-    <div className="flex flex-col min-h-[calc(100vh-4rem)]">
-      <section className="flex-1 flex items-center justify-center py-12 px-4">
-        <div className="text-center space-y-6 max-w-3xl">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-            Welcome to <span className="text-primary">Next.js</span> Community Starter
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A modern starter template with shadcn/ui components and theme support to help you build beautiful web
-            applications.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg">
-              <Link href="/about">Get Started</Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <a
-                href="https://github.com/your-username/next-community-starter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View on GitHub
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
+    <div className="flex flex-col min-h-screen items-center justify-center text-center px-4">
+      <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl mb-6">
+        Welcome to Next.js Community Starter
+      </h1>
+      <p className="text-xl text-muted-foreground max-w-2xl mb-8">
+        A modern starter template with shadcn/ui components and theme support to help you build beautiful web
+        applications.
+      </p>
+      <div className="flex flex-wrap justify-center gap-4">
+        <a
+          href="/about"
+          className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
+        >
+          Get Started
+        </a>
+        <a
+          href="https://github.com/yourusername/next-community-starter"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground"
+        >
+          View on GitHub
+        </a>
+      </div>
     </div>
   )
 }
