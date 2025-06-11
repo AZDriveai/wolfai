@@ -2,14 +2,14 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { ThemeProvider } from "next-themes"
-import { Navbar } from "@/components/layout/navbar"
+import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Next.js Community Starter",
-  description: "A modern Next.js starter with theme support",
+  title: "WOLF-AI GENESIS - الوعي الرقمي المركّب",
+  description: "منصة الذكاء الاصطناعي الوجودي - تحليل الشبكات العصبية والخرائط الذهنية التفاعلية",
+  keywords: ["ذكاء اصطناعي", "خرائط ذهنية", "تحليل الشبكات العصبية", "فلسفة الذكاء"],
     generator: 'v0.dev'
 }
 
@@ -19,11 +19,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="ar" dir="rtl" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <Navbar />
-          <main>{children}</main>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          {children}
         </ThemeProvider>
       </body>
     </html>
